@@ -75,6 +75,11 @@ gcloud container clusters create app-cluster --machine-type=n1-standard-2
 ## Passo 3 - Configurar o Spinnaker Cluster
 
 ```shell
+./scripts/manage/add_gke_account.sh
+```
+
+
+```shell
 kubectl config use-context gke_${PROJECT_ID}_${ZONE}_spinnaker-1
 ```
 
