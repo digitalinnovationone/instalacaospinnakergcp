@@ -59,7 +59,7 @@ A instalação pode levar uma média de 15 minutos.
 ```
 
 
-#Inclusao segundo cluster GKE
+# Inclusao segundo cluster GKE
 
 ## Passo 1 - Configurar a região do cluster
 
@@ -72,7 +72,7 @@ APP_REGION=us-east1-b; gcloud config set compute/zone $APP_REGION
 gcloud container clusters create app-cluster --machine-type=n1-standard-2
 ```
 
-##Passo 3 - Configurar o Spinnaker Cluster
+## Passo 3 - Configurar o Spinnaker Cluster
 
 ```shell
 kubectl config use-context gke_${PROJECT_ID}_${ZONE}_spinnaker-1
