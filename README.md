@@ -58,3 +58,27 @@ A instalação pode levar uma média de 15 minutos.
 ./scripts/manage/connect_unsecured.sh
 ```
 
+
+#Inclusao segundo cluster GKE
+
+## Passo 1 - Configurar a região do cluster
+
+```shell
+APP_REGION=us-east1-b; gcloud config set compute/zone $APP_REGION
+```
+
+## Passo 2 - Criação do Cluster
+```shell
+gcloud container clusters create app-cluster --machine-type=n1-standard-2
+```
+
+##Passo 3 - Configurar o Spinnaker Cluster
+
+```shell
+kubectl config use-context gke_${PROJECT_ID}_${ZONE}_spinnaker-1
+```
+
+```shell
+./scripts/manage/push_and_apply.sh
+```
+
