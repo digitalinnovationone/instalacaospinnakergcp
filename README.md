@@ -134,6 +134,10 @@ cat templates/pipelines/deployprod_json.template | envsubst  > templates/pipelin
 mkdir -p ~/$PROJECT_ID/spinnaker-for-gcp-helloworldwebapp/
 ```
 
+```shell
+cp -r templates/repo/src ~/$PROJECT_ID/spinnaker-for-gcp-helloworldwebapp/
+```
+
 ## 2. Copie o código fonte da aplicação
 
 ```shell
